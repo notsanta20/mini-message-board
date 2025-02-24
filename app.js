@@ -38,4 +38,4 @@ app.post(`/new`, (req, res) => {
   res.redirect(`/`);
 });
 
-app.listen(3030, console.log(`Server started`));
+app.listen(8000, console.log(`Server started`));
