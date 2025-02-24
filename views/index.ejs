@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1><%= mess%></h1>
+    <a href="/new">Add new message</a>
+    <%messages.forEach(message=>{%>
+    <h2>User : <%= message.user%></h2>
+    <h2>Text : <%= message.text%></h2>
+    <h3>Date: <%= message.added%></h3>
+    <%});%>
+  </body>
+</html>
