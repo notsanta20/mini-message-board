@@ -13,6 +13,16 @@ class Storage {
   getUser() {
     return Object.values(this.storage);
   }
+
+  searchUser(user) {
+    const data = Object.values(this.storage);
+    if (data.length === 0) {
+      return false;
+    } else {
+      const filtered = data.filter((d) => d.name === user);
+      return filtered ? filtered[0] : false;
+    }
+  }
 }
 
 module.exports = new Storage();

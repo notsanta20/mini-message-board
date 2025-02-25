@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results</title>
+  </head>
+  <body>
+    <h1>Results</h1>
+    <% if(data === false){%>
+    <h2>Not Found</h2>
+    <%}else{%>
+    <h2>Name: <%= data.name%></h2>
+    <h2>Age: <%= data.age%></h2>
+    <h2>Mail: <%= data.mail%></h2>
+    <h2>Bio: <%= data.bio%></h2>
+    <%}%>
+  </body>
+</html>

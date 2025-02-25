@@ -40,3 +40,13 @@ exports.addUser = [
     res.redirect(`/`);
   },
 ];
+
+exports.searchUser = (req, res) => {
+  res.render(`searchUser`);
+};
+
+exports.search = (req, res) => {
+  const user = req.query.search;
+  const result = storage.searchUser(user);
+  res.render(`search`, { data: result });
+};
