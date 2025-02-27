@@ -18,7 +18,7 @@ VALUES
 async function main() {
   console.log("seeding...");
   const client = new Client({
-    connectionString: `postgres://koyeb-adm:npg_e0HfFX6DQBoU@ep-mute-art-a2ma5jr4.eu-central-1.pg.koyeb.app/koyebdb?sslmode=require`,
+    connectionString: `postgres://${process.env.DATABASE_NAME}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_HOST}/${process.env.DATABASE_USER}?sslmode=require`,
   });
   await client.connect();
   await client.query(SQL);
